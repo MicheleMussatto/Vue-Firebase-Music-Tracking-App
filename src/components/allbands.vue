@@ -4,7 +4,7 @@
     <h1 class="bigbig">KC Local Bands</h1>
     <button class="signoutbutton"><router-link to="/">Return to Home</router-link></button>
 
-    <!-- <div class="imageDiv" id="imageDiv1">
+    <div class="imageDiv" id="imageDiv1">
         <div class="imageDivTitle">
 
           <div class="floating-box"><router-link to="/allbands"><a href=""><h3>Bands List</h3></a></router-link></div>
@@ -16,7 +16,7 @@
 
     <div class="pageTop">
       <h1>All Bands</h1>
-    </div> -->
+    </div>
 
   </div>
 </template>

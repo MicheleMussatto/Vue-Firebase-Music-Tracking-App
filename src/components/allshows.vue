@@ -94,36 +94,6 @@
         }
         listShows();
 
-//michele's psuedo code attempt 1
-        // function listShows() {
-        //   console.log("working");
-        //   let i = 0
-        //   let foundUser = musicRef.child(users[i]);
-        //   if (foundUser != null) {
-        //
-        //     let j = 0
-        //     let foundShow = musicRef.foundUser.child(shows[j]);
-        //     if (foundShow != null) {
-        //     return foundShow
-        //     //push foundShow to "shows" array
-        //     j++
-        //     }
-        //   i++
-        //   }
-        // }
-        // listShows();
-
-        // firebase.auth().onAuthStateChanged((user) => {
-        //   if (user) {
-        //     console.log(firebase.auth().currentUser);
-        //     this.name = firebase.auth().currentUser.displayName;
-        //     this.email = firebase.auth().currentUser.email;
-        //     this.uid = firebase.auth().currentUser.uid;
-        //     this.$bindAsArray('music', fb.db.ref(this.uid + "/shows"));
-        //   } else {
-        //     // No user is signed in.
-        //   }
-        // });
       }
     }
   </script>
@@ -139,28 +109,3 @@ h1, h2 {
 .pageTop {
   margin-top: 150px;
 }
-
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 10px;
-}
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>

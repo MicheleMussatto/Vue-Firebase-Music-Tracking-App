@@ -159,7 +159,7 @@
 
           <!-- Any other Bulma elements you want -->
         </div>
-        <button class="modal-close is-large" @click ="closeMovie()" aria-label="close"></button>
+        <button class="modal-close is-large" @click ="closeShow()" aria-label="close"></button>
       </div>
 
   </div>

@@ -24,8 +24,8 @@ export default {
   },
   data () {
     return {
-      msg: "KC Metal Connection",
-      comment: "Tracking Metal Music around Kansas City",
+      msg: "KC Music Connection",
+      comment: "Tracking Local Music around Kansas City",
       }
     }
   }
