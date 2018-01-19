@@ -2,16 +2,15 @@
   <div id="app">
       <!-- <div class="navLinks">
           <router-link to="/" class="navLinks"><a href=""><h3>Home</h3></a></router-link>
-          <router-link to="/allbands" class="navLinks"><a href=""><h3>Bands List</h3></a></router-link>
+          <router-link to="/all`band`s" class="navLinks"><a href=""><h3>Bands List</h3></a></router-link>
           <router-link to="/allvenues" class="navLinks"><a href=""><h3>Venues List</h3></a></router-link>
           <router-link to="/allshows" class="navLinks"><a href=""><h3>Events List</h3></a></router-link>
       </div> -->
-    <h1 class="bigbig">shows.vue</h1>
+    <h1 class="bigbig">{{ showstitle }}</h1>
     <button class="signoutbutton"><router-link to="/profile">Return to Profile</router-link></button>
 
     <div class="appBoxes">
         <div class="appBox">
-          <h2>{{ showstitle }}</h2>
 
           <table class="table">
             <thead>
@@ -31,7 +30,7 @@
                 <td id="showsTableName" @click="openShow(show)">{{show.name}}</td>
                 <td id="showsTableVenue" @click="openShow(show)">{{show.venue}}</td>
                 <td id="showsTableTown" @click="openShow(show)">{{show.town}}</td>
-                <td id="showsTableBands" @click="openShow(show)">{{show.bands}}</td>
+                <td id="showsTableBands" @click="openShow(show)">{{show.acts}}</td>
                 <td id="showsTableDate" @click="openShow(show)">{{show.date}}</td>
                 <td id="showsTableTime" @click="openShow(show)">{{show.time}}</td>
                 <td id="showsTableURL" @click="openShow(show)">{{show.url}}</td>
@@ -71,7 +70,7 @@
             <div class="field">
               <label class="label">Bands</label>
               <div class="control">
-                <input id="year" v-model="showsObject.bands" class="input" type="text" placeholder="Text input">
+                <input id="year" v-model="showsObject.acts" class="input" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
@@ -130,7 +129,7 @@
                 <div class="field">
                   <label class="label">Bands</label>
                   <div class="control">
-                    <input id="newBands" v-model="showsObject.bands" class="input" type="text" placeholder="Text input">
+                    <input id="newBands" v-model="showsObject.acts" class="input" type="text" placeholder="Text input">
                   </div>
                 </div>
                 <div class="field">
@@ -192,7 +191,7 @@
             name: '',
             venue: '',
             town: '',
-            bands: '',
+            acts: '',
             date: '',
             time: '',
             url: ''
@@ -207,7 +206,7 @@
             this.showsObject.name="";
             this.showsObject.venue="";
             this.showsObject.town="";
-            this.showsObject.bands="";
+            this.showsObject.acts="";
             this.showsObject.date="";
             this.showsObject.time="";
             this.showsObject.url="";
@@ -222,7 +221,7 @@
             this.showsObject.name=show.name;
             this.showsObject.venue=show.venue;
             this.showsObject.town=show.town;
-            this.showsObject.bands=show.bands;
+            this.showsObject.acts=show.acts;
             this.showsObject.date=show.date;
             this.showsObject.time=show.time;
             this.showsObject.url=show.url;
@@ -233,7 +232,7 @@
               name: this.showsObject.name,
               venue: this.showsObject.venue,
               town: this.showsObject.town,
-              bands: this.showsObject.bands,
+              acts: this.showsObject.acts,
               date: this.showsObject.date,
               time: this.showsObject.time,
               url: this.showsObject.url
@@ -242,7 +241,7 @@
             this.showsObject.name="";
             this.showsObject.venue="";
             this.showsObject.town="";
-            this.showsObject.bands="";
+            this.showsObject.acts="";
             this.showsObject.date="";
             this.showsObject.time="";
             this.showsObject.url="";
@@ -253,7 +252,7 @@
             this.showsObject.name="";
             this.showsObject.venue="";
             this.showsObject.town="";
-            this.showsObject.bands="";
+            this.showsObject.acts="";
             this.showsObject.date="";
             this.showsObject.time="";
             this.showsObject.url="";
@@ -274,11 +273,3 @@
       }
     }
   </script>
-
-<style>
-/*.navLink {
-  display: inline-block;
-  font-size: 24px;
-  color: white;
-}*/
-</style>

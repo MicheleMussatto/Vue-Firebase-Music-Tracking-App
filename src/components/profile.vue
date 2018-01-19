@@ -72,7 +72,7 @@
             <thead>
               <tr>
                 <th><abbr title="Name">Name</abbr></th>
-                <th><abbr title="Town">Town</abbr></th>
+                <th><abbr title="Address">Address</abbr></th>
                 <th><abbr title="Website">Website</abbr></th>
                 <th><abbr title="About">About</abbr></th>
               </tr>
@@ -80,13 +80,13 @@
             <tbody>
               <tr v-for="venue in venues">
                 <td id="bandsTableName">{{venue.name}}</td>
-                <td id="bandsTableTown">{{venue.town}}</td>
+                <td id="bandsTableAddress">{{venue.address}}</td>
                 <td id="bandsTableURL">{{venue.url}}</td>
                 <td id="bandsTableURL">{{venue.about}}</td>
               </tr>
             </tbody>
           </table>
-          <router-link to="/bands">Edit Venues List</router-link>
+          <router-link to="/venues">Edit Venues List</router-link>
         </div>
       </div>
 
@@ -153,7 +153,5 @@
   </script>
 
 <style>
-h2 {
-  font-size: 24px;
-}
+
 </style>

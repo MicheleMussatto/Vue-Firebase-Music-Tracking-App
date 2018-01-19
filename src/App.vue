@@ -30,21 +30,3 @@ export default {
     }
   }
 </script>
-
-<style>
-/*<style lang="scss">*/
-
-#app {
-  text-align: center;
-  background: #5D5046;
-
-}
-.title {
-  color: white;
-
-}
-.subtitle {
-  color: white;
-  font-family: sans-serif;
-}
-</style>

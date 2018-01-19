@@ -8,7 +8,6 @@
           </nav>
       </div>
      </header> -->
-
      <div class="imageDiv" id="imageDiv1">
          <div class="imageDivTitle">
 
@@ -47,17 +46,3 @@
     }
   }
 </script>
-
-
-<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/2.5.1/firebase-ui-auth.css" />
-<style>
-/*<style lang="scss">*/
-h3 {
-  font-size: 32px;
-  color: white;
-}
-h3:hover {
-opacity: 0.5;
-}
-
-</style>
