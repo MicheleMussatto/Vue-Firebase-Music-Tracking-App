@@ -23,7 +23,7 @@
                 <td id="venuesTableVenue" @click="openShow(venue)">{{venue.address}}</td>
                 <td id="venuesTableTown" @click="openShow(venue)">{{venue.url}}</td>
                 <td id="venuesTableBands" @click="openShow(venue)">{{venue.about}}</td>
-                <td><a class="delete" @click="deleteShow(venue)"></a></td>
+                <td><a class="delete" @click="deleteShow(venue)"></a> DELETE THIS VENUE</td>
               </tr>
             </tbody>
           </table>
@@ -34,35 +34,35 @@
 
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title">Add New Venue</p>
+          <p class="card-header-title">ADD NEW VENUE</p>
         </header>
         <div class="card-content">
           <div class="content">
             <div class="field">
               <label class="label">Name</label>
               <div class="control">
-                <input id="genre" v-model="venuesObject.name" class="input" type="text" placeholder="Text input">
+                <input id="genre" v-model="venuesObject.name" class="input" type="text">
               </div>
             </div>
             <div class="field">
               <label class="label">Address</label>
               <div class="control">
-                <input id="year" v-model="venuesObject.address" class="input" type="text" placeholder="Text input">
+                <input id="year" v-model="venuesObject.address" class="input" type="text">
               </div>
             </div>
             <div class="field">
               <label class="label">Website</label>
               <div class="control">
-                <input id="year" v-model="venuesObject.url" class="input" type="text" placeholder="Text input">
+                <input id="year" v-model="venuesObject.url" class="input" type="text">
               </div>
             </div>
             <div class="field">
               <label class="label">About</label>
               <div class="control">
-                <input id="year" v-model="venuesObject.about" class="input" type="text" placeholder="Text input">
+                <input id="year" v-model="venuesObject.about" class="input" type="text">
               </div>
             </div>
-            <a class="button is-primary" @click ="addShow">Submit</a>
+            <a class="button is-primary" id="submit" @click ="addShow">Submit</a>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
                   </div>
                 </div>
                 <a class="button is-primary" id="submit" @click ="editShow()">Submit</a>
-                <a class="button is-primary" @click ="closeShow()">Cancel</a>
+                <a class="button is-primary" id="submit" @click ="closeShow()">Cancel</a>
               </div>
             </div>
           </div>

@@ -13,28 +13,28 @@
         <div class="appBox">
 
           <table class="table">
-            <thead class="theadVisible">
+            <thead>
               <tr>
-                <th scope="col"><abbr title="Name">Name</abbr></th>
-                <th scope="col"><abbr title="Venue">Venue</abbr></th>
-                <th scope="col"><abbr title="Town">Town</abbr></th>
-                <th scope="col"><abbr title="Bands">Bands</abbr></th>
-                <th scope="col"><abbr title="Date">Date</abbr></th>
-                <th scope="col"><abbr title="Time">Time</abbr></th>
-                <th scope="col"><abbr title="Website">Website</abbr></th>
-                <th scope="col"><abbr title="delete"></abbr>DELETE</th>
+                <th><abbr title="Name">Name</abbr></th>
+                <th><abbr title="Venue">Venue</abbr></th>
+                <th><abbr title="Town">Town</abbr></th>
+                <th><abbr title="Bands">Bands</abbr></th>
+                <th><abbr title="Date">Date</abbr></th>
+                <th><abbr title="Time">Time</abbr></th>
+                <th><abbr title="Website">Website</abbr></th>
+                <th><abbr title="delete"></abbr>DELETE</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="show in music">
-                <td scope="row" class="blockTable" id="showsTableName" @click="openShow(show)">{{show.name}}</td>
-                <td class="blockTable" id="showsTableVenue" @click="openShow(show)">{{show.venue}}</td>
-                <td class="blockTable" id="showsTableTown" @click="openShow(show)">{{show.town}}</td>
-                <td class="blockTable" id="showsTableBands" @click="openShow(show)">{{show.acts}}</td>
-                <td class="blockTable" id="showsTableDate" @click="openShow(show)">{{show.date}}</td>
-                <td class="blockTable" id="showsTableTime" @click="openShow(show)">{{show.time}}</td>
-                <td class="blockTable" id="showsTableURL" @click="openShow(show)">{{show.url}}</td>
-                <td class="blockTable" ><a class="delete" @click="deleteShow(show)"></a> DELETE THIS SHOW</td>
+                <td id="showsTableName" @click="openShow(show)">{{show.name}}</td>
+                <td id="showsTableVenue" @click="openShow(show)">{{show.venue}}</td>
+                <td id="showsTableTown" @click="openShow(show)">{{show.town}}</td>
+                <td id="showsTableBands" @click="openShow(show)">{{show.acts}}</td>
+                <td id="showsTableDate" @click="openShow(show)">{{show.date}}</td>
+                <td id="showsTableTime" @click="openShow(show)">{{show.time}}</td>
+                <td id="showsTableURL" @click="openShow(show)">{{show.url}}</td>
+                <td><a class="delete" @click="deleteShow(show)"></a></td>
               </tr>
             </tbody>
           </table>
@@ -52,25 +52,25 @@
             <div class="field">
               <label class="label">Name</label>
               <div class="control">
-                <input id="genre" v-model="showsObject.name" class="input" type="text">
+                <input id="genre" v-model="showsObject.name" class="input" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
               <label class="label">Venue</label>
               <div class="control">
-                <input id="title" v-model="showsObject.venue" class="input" type="text">
+                <input id="title" v-model="showsObject.venue" class="input" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
               <label class="label">Town</label>
               <div class="control">
-                <input id="year" v-model="showsObject.town" class="input" type="text">
+                <input id="year" v-model="showsObject.town" class="input" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
-              <label class="label" id="addLabel">Bands</label>
+              <label class="label">Bands</label>
               <div class="control">
-                <input id="year" v-model="showsObject.acts" class="input" type="text">
+                <input id="year" v-model="showsObject.acts" class="input" type="text" placeholder="Text input">
               </div>
             </div>
             <div class="field">
@@ -91,7 +91,7 @@
                 <input id="year" v-model="showsObject.url" class="input" type="text" placeholder="Text input">
               </div>
             </div>
-            <a class="button is-primary" id="submit" @click ="addShow">Submit</a>
+            <a class="button is-primary" @click ="addShow">Submit</a>
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@
                   </div>
                 </div>
                 <a class="button is-primary" id="submit" @click ="editShow()">Submit</a>
-                <a class="button is-primary" id="submit" @click ="closeShow()">Cancel</a>
+                <a class="button is-primary" @click ="closeShow()">Cancel</a>
               </div>
             </div>
           </div>

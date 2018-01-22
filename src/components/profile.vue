@@ -10,7 +10,7 @@
 
   <div class="appBoxes">
       <div class="appBox">
-        <h2>{{ showstitle }}</h2>
+        <h2 id="tableTitle">{{ showstitle }}</h2>
 
         <table class="table">
           <thead>
@@ -42,7 +42,7 @@
 
     <div class="appBoxes">
         <div class="appBox">
-          <h2>{{ bandstitle }}</h2>
+          <h2 id="tableTitle">{{ bandstitle }}</h2>
 
           <table class="table">
             <thead>
@@ -66,7 +66,7 @@
 
     <div class="appBoxes">
         <div class="appBox">
-          <h2>{{ venuestitle }}</h2>
+          <h2 id="tableTitle">{{ venuestitle }}</h2>
 
           <table class="table">
             <thead>

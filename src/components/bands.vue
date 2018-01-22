@@ -6,7 +6,6 @@
 
       <div class="appBoxes">
           <div class="appBox">
-            <h2>{{ bandstitle }}</h2>
 
             <table class="table">
               <thead>
@@ -22,7 +21,7 @@
                   <td id="bandsTableName" @click="openShow(band)">{{band.Name}}</td>
                   <td id="bandsTableTown" @click="openShow(band)">{{band.Town}}</td>
                   <td id="bandsTableURL" @click="openShow(band)">{{band.URL}}</td>
-                  <td><a class="delete" @click="deleteShow(band)"></a></td>
+                  <td><a class="delete" @click="deleteShow(band)"></a> DELETE THIS BAND</td>
                 </tr>
               </tbody>
             </table>
@@ -40,22 +39,22 @@
               <div class="field">
                 <label class="label">Name</label>
                 <div class="control">
-                  <input id="genre" v-model="bandsObject.Name" class="input" type="text" placeholder="Text input">
+                  <input id="genre" v-model="bandsObject.Name" class="input" type="text">
                 </div>
               </div>
               <div class="field">
                 <label class="label">Town</label>
                 <div class="control">
-                  <input id="year" v-model="bandsObject.Town" class="input" type="text" placeholder="Text input">
+                  <input id="year" v-model="bandsObject.Town" class="input" type="text">
                 </div>
               </div>
               <div class="field">
                 <label class="label">Website</label>
                 <div class="control">
-                  <input id="year" v-model="bandsObject.URL" class="input" type="text" placeholder="Text input">
+                  <input id="year" v-model="bandsObject.URL" class="input" type="text">
                 </div>
               </div>
-              <a class="button is-primary" @click ="addShow">Submit</a>
+              <a class="button is-primary" id="submit" @click ="addShow">Submit</a>
             </div>
           </div>
         </div>
@@ -91,7 +90,7 @@
                     </div>
                   </div>
                   <a class="button is-primary" id="submit" @click ="editShow()">Submit</a>
-                  <a class="button is-primary" @click ="closeShow()">Cancel</a>
+                  <a class="button is-primary" id="submit" @click ="closeShow()">Cancel</a>
                 </div>
               </div>
             </div>
