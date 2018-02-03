@@ -1,5 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css?family=Barlow');
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC');*/
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Barlow');
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -450,7 +448,9 @@ template {
   display: none;
 }
 
+/*-------------------------------------------------------------------------------------*/
 /*KC LOCAL MUSIC CONNECTION stylesheet by Michele Mussatto ============================*/
+/*-------------------------------------------------------------------------------------*/
 
 body, html {
   height: 100%;
@@ -458,12 +458,13 @@ body, html {
   font-family: 'Barlow', sans-serif;
   font-size: 14px;
   color: #5D5046;
-  }
+}
 .profileDiv {
   text-align: center;
   background-color: white;
   margin: 50px;
   padding: 10px;
+  padding-top: 20px;
 }
 .profileDisplay {
   margin-bottom: 20px;
@@ -475,16 +476,14 @@ body, html {
   -webkit-flex: 1;
   display: flex;
   flex-direction: column;
-	min-height: 250px;
-	padding: 2% 3%;
+	/*min-height: 250px;*/
 }
 .appBox {
   flex: 1;
   -webkit-flex: 1;
   text-align: center;
-	padding: 0px 10px;
   border: solid 1px #5D5046;
-  margin: 10px;
+  margin: 2%;
 }
 h1, h2, h3, h4, h5, h6, p {
 /*These settings are borrowed from the reset.css stylesheet,
@@ -523,26 +522,6 @@ h6 {
 p, li {
   line-height: 1.5;
 }
-blockquote {
-  font-size: 22px;
-  line-height: 1.2;
-  text-align: justify;
-  margin: 0px 250px;
-  padding-bottom: 40px;
-}
-.quoteAuthor {
-  font-family: 'Amatic SC', cursive;
-  font-size: 28px;
-  text-align: right;
-  font-style: italic;
-  font-weight: bold;
-  background: #9E9E9E;
-  opacity: 0.8;
-  color: white;
-  padding-right: 10px;
-  margin-top: 15px;
-}
-
 .navbar {
   width: 100%;
   margin: 0 auto;
@@ -551,10 +530,8 @@ blockquote {
   min-height: 70px;
   z-index: 1;
 }
-
 #logo {
   height: 120px;
-
 }
 .logo {
   float: left;
@@ -586,12 +563,25 @@ a:hover {
   color: black;
   opacity: .5;
 }
-
-/*===============================================
-BEGINNING MUSIC APP STYLES
-===============================================*/
+#whiteLink {
+  color: white;
+  text-transform: none;
+  font-weight: bold;
+}
+.pageTitle {
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 2%;
+}
+#pageTitle {
+  font-size: 52px;
+}
 .card {
-  	margin: 0% 6%;
+  	margin: 2%;
+    margin-top: 0%;
+    margin-bottom: 15px;
+}
+#editBox {
+  max-height: calc(100vh - 0px);
 }
 .floating-box {
     display: inline-block;
@@ -609,9 +599,13 @@ BEGINNING MUSIC APP STYLES
     /*border: 1px solid white;*/
     background-color: rgba(255, 255, 255, 0.3);
 }
+.signinBox {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 80%;
+  margin: 90px auto;
+}
 .signinhere {
-  /*color: #5D5046;*/
-  color: white;
+  color: red;
   text-align: center;
 }
 .firebaseauth {
@@ -620,19 +614,22 @@ BEGINNING MUSIC APP STYLES
 .signoutbutton {
   background: #5D5046;
 }
-
-
-/*===============================================
-ENDING MUSIC APP STYLES
-===============================================*/
-
+.returnbutton {
+  background-color: rgba(255, 255, 255, 0.0);
+}
+.copyright {
+  color: white;
+  font-size: 12px;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
 .imageDivTitle {
   color: white;
   text-shadow: 0px 0px 20px black;
   left: 0;
   position:absolute;
   text-align:center;
-  top: 35%;
+  top: 25%;
   width: 100%
 }
 .imageDiv {
@@ -643,71 +640,12 @@ ENDING MUSIC APP STYLES
   background-size: cover;
 }
 #imageDiv1 {
-  background-image: url("images/Joey Belladonna of Anthrax on Killthrax Tour 2017 2.JPG");
-  height: 725px;
+  background-image: url("images/concertpic2new.jpg");
+  height: 470px;
 }
 .textDiv {
   padding: 2.5em;
   /*display:inline-block;*/
-}
-.avatar {
-  border-radius: 50%;
-  height: 250px;
-  /*box-shadow: -1px 1px 10px #5D5046;*/
-}
-/*.avatar:hover {
-  border-radius: 50%;
-  height: 140px;
-  box-shadow: -2px 2px 20px #5D5046;
-}*/
-.avatars {
-  float:left;
-  display: inline-block;
-  width: 67%;
-}
-/*.avatars:hover {
-  -webkit-flex: 1;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 30px;
-  color: #5D5046;
-}*/
-.avatarbox {
-  display: inline-block;
-  width: 33%;
-  text-align: center;
-}
-/*.avatarbox:hover {
-  flex: 1;
-  -webkit-flex: 1;
-  text-align: center;
-  color: #5D5046;
-}*/
-.flexboxside {
-  flex: 3;
-  -webkit-flex: 1;
-}
-.sectionHead1 {
-  text-align: center;
-  padding-bottom: 40px;
-  color: white;
-}
-.sectionText1 {
-  font-size: 18px;
-  line-height: 1.2;
-  text-align: center;
-  padding-bottom: 40px;
-  color: white;
-}
-.sectionHead {
-  text-align: left;
-  padding-bottom: 40px;
-}
-.sectionText {
-  font-size: 18px;
-  line-height: 1.2;
-  text-align: left;
-  padding-bottom: 40px;
 }
 .button {
   padding-bottom: 40px;
@@ -738,6 +676,12 @@ button {
 #leftButton {
   text-align: left;
 }
+#cardTitle {
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  color: red;
+font-weight: normal;
+}
 
 /*-----------------------------------------
 TABLE STYLES
@@ -749,6 +693,8 @@ table {
   padding: 0;
   width: 100%;
   table-layout: fixed;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 td, th, .card-header-title, .field {
   word-break: break-all;
@@ -756,7 +702,6 @@ td, th, .card-header-title, .field {
 }
 .content {
   font-size: 14px;
-
 }
 thead {
   background: #c9a775;
@@ -787,24 +732,15 @@ tr:hover {
 }
 
 /*------------------------------------------
-TABLE BREAKPOINTS
+RESPONSIVE BREAKPOINTS
 ------------------------------------------*/
-/*@media (min-width:100px) {
-.theadVisible {visibility: collapse;}
-td, th {font-size: 17px;}
-.ttitle {font-size: 37px;}
-}
-@media (min-width:414px) {
-.theadVisible {visibility: collapse;}
-td, th {font-size: 17px;}
-.ttitle {font-size: 37px;}
-}
-@media (min-width:480px) {
-.theadVisible {visibility: collapse;}
-td, th {font-size: 17px;}
-.ttitle {font-size: 34px;}
-}*/
-  @media screen and (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
+  .profileDiv {
+    margin: 30px;
+    padding: 0px;
+    padding-top: 20px;
+  }
   table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -813,7 +749,6 @@ td, th {font-size: 17px;}
     overflow: hidden;
     padding: 0;
     position: absolute;
-    /*width: 1px;*/
   }
   table tr {
     padding: 0px 10px;
@@ -830,7 +765,6 @@ td, th {font-size: 17px;}
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-
   }
   #addLabel {
   font-size: 14px;

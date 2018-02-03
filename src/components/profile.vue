@@ -82,14 +82,14 @@
                 <td id="bandsTableName">{{venue.name}}</td>
                 <td id="bandsTableAddress">{{venue.address}}</td>
                 <td id="bandsTableURL">{{venue.url}}</td>
-                <td id="bandsTableURL">{{venue.about}}</td>
+                <td id="bandsTableAbout">{{venue.about}}</td>
               </tr>
             </tbody>
           </table>
           <router-link to="/venues">Edit Venues List</router-link>
         </div>
       </div>
-
+<!-- <p><a href="{{venue.url}}" target="_blank">{{venue.url}}</a></p> -->
   </div>
 
 </template>

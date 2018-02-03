@@ -6,9 +6,13 @@
           <router-link to="/allvenues" class="navLinks"><a href=""><h3>Venues List</h3></a></router-link>
           <router-link to="/allshows" class="navLinks"><a href=""><h3>Events List</h3></a></router-link>
       </div> -->
-    <h1 class="bigbig">{{ showstitle }}</h1>
-    <button class="signoutbutton"><router-link to="/profile">Return to Profile</router-link></button>
-
+    <div class="pageTitle">
+      <h1 class="bigbig" id="pageTitle">{{ showstitle }}</h1>
+      <p>To <b>EDIT</b> a show, click on it.</p>
+      <p>Once you <b>DELETE</b> a show, it cannot be undone!</p>
+      <p>To <b>ADD</b> a show, scroll down.</p>
+      <button class="returnbutton"><router-link to="/profile">Return to Profile</router-link></button>
+    </div>
     <div class="appBoxes">
         <div class="appBox">
 
@@ -45,7 +49,7 @@
 
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title">Add New Show</p>
+          <p class="card-header-title" id="cardTitle">Add New Show</p>
         </header>
         <div class="card-content">
           <div class="content">
@@ -76,19 +80,19 @@
             <div class="field">
               <label class="label">Date</label>
               <div class="control">
-                <input id="year" v-model="showsObject.date" class="input" type="text" placeholder="Text input">
+                <input id="year" v-model="showsObject.date" class="input" type="text">
               </div>
             </div>
             <div class="field">
               <label class="label">Time</label>
               <div class="control">
-                <input id="year" v-model="showsObject.time" class="input" type="text" placeholder="Text input">
+                <input id="year" v-model="showsObject.time" class="input" type="text">
               </div>
             </div>
             <div class="field">
               <label class="label">Website</label>
               <div class="control">
-                <input id="year" v-model="showsObject.url" class="input" type="text" placeholder="Text input">
+                <input id="year" v-model="showsObject.url" class="input" type="text">
               </div>
             </div>
             <a class="button is-primary" id="submit" @click ="addShow">Submit</a>
@@ -100,11 +104,11 @@
 
       <div v-if="visible" class="modal is-active">
         <div class="modal-background"></div>
-        <div class="modal-content">
+        <div class="modal-content" id="editBox">
 
           <div class="card">
             <header class="card-header">
-              <p class="card-header-title">Edit Show</p>
+              <p class="card-header-title" id="cardTitle">Edit Show</p>
             </header>
             <div class="card-content">
               <div class="content">

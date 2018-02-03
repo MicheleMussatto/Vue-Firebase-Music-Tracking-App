@@ -12,12 +12,12 @@
          <div class="imageDivTitle">
 
           <!-- //DO NOT DELETE - KEEP FOR ADDING COMPILED LISTS VIEWABLE PUBLICALLY -->
-           <div class="floating-box"><router-link to="/allbands"><a href=""><h3>Bands List</h3></a></router-link></div>
+           <!-- <div class="floating-box"><router-link to="/allbands"><a href=""><h3>Bands List</h3></a></router-link></div>
            <div class="floating-box"><router-link to="/allvenues"><a href=""><h3>Venues List</h3></a></router-link></div>
-           <div class="floating-box"><router-link to="/allshows"><a href=""><h3>Shows List</h3></a></router-link></div>
+           <div class="floating-box"><router-link to="/allshows"><a href=""><h3>Shows List</h3></a></router-link></div> -->
 
-          <div>
-             <div class="firebaseauth" id="firebaseui-auth-container" lang="en"><h3 class="signinhere"><b>Sign In Here to Add to These Lists!</b></h3></div>
+          <div class="signinBox">
+             <div class="firebaseauth" id="firebaseui-auth-container" lang="en"><h3 class="signinhere">Sign In to Start Tracking!</h3></div>
           </div>
 
          </div>

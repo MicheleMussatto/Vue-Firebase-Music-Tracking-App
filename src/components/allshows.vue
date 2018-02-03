@@ -20,8 +20,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="show in music">
-                <td id="showsTableName">{{show.name}}</td>
+              <tr v-for="show in shows">
+                <td id="showsTableName">{{show.name}</td>
                 <td id="showsTableVenue">{{show.venue}}</td>
                 <td id="showsTableTown">{{show.town}}</td>
                 <td id="showsTableBands">{{show.bands}}</td>
@@ -49,51 +49,49 @@
     import fb from "../utils/firebaseConfig"
 
     let musicRef = fb.db.ref();
-
-    // let musicRef = fb.db.ref(this.uid + "/shows"); ******
-    // let musicRef = fb.db.ref("0/shows");
-    // let musicRef = fb.db.ref.child("users/shows")
-    // let musicRef = fb.db.child("users").ref("/shows")
-    // let musicRef = fb.db.ref("users").child("/shows")
-    // let musicRef = fb.db.ref().child("users/shows")
-    // let musicRef = fb.db.ref("users/shows")
+    //let showsRef = fb.db.ref(this.uid + "/shows");
+    let showsRef = fb.db.ref().child('/shows');
 
     export default {
       name: 'allshows',
       firebase: {
-        music: musicRef
-        // db: db.ref();
+        shows: showsRef
       },
       data() {
         return {
           name: "",
           uid: "",
           email: "",
-          foundShow: {
-            name: '',
-            venue: '',
-            town: '',
-            bands: '',
-            date: '',
-            time: '',
-            url: ''
-          },
+          // foundShow: {
+          //   name: '',
+          //   venue: '',
+          //   town: '',
+          //   bands: '',
+          //   date: '',
+          //   time: '',
+          //   url: ''
+          // },
           // visible: 0,
           // currentShow: {},
-          shows: [],
+          // shows: [],
         }
       },
-      // methods: {
-      //
-      // },
       created() {
-
-        function listShows() {
-          console.log("working");
-          console.log(db);
-        }
-        listShows();
-
+        firebase.auth().onAuthStateChanged((user) => {
+          if (user) {
+            console.log(firebase.auth().currentUser);
+            this.name = firebase.auth().currentUser.displayName;
+            this.email = firebase.auth().currentUser.email;
+            this.uid = firebase.auth().currentUser.uid;
+            //uid = firebase.auth().uid;
+            this.$bindAsArray('music', fb.db.ref(this.uid));
+            this.$bindAsArray('shows', fb.db.ref(this.uid + "/shows"));
+            this.$bindAsArray('bands', fb.db.ref(this.uid + "/shows"));
+            // this.$bindAsArray('venues', fb.db.ref(this.uid + "/venues"));
+          } else {
+            // No user is signed in.
+          }
+        });
       }
     }
   </script>

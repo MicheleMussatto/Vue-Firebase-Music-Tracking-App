@@ -1,9 +1,12 @@
 <template>
   <div id="app">
-    <h1 class="title">{{msg}}</h1>
+    <h1 >{{msg}}</h1>
     <h3 class="subtitle">{{comment}}</h3>
 
     <router-view></router-view>
+    <div class="copyright">
+      <p>&copy; Copyright 2018 <a id="whiteLink" href="http://highsigndesign.com/" target="_blank"> HighSignDesign</a></p>
+    </div>
   </div>
 </template>
 
@@ -20,12 +23,12 @@ let musicRef = fb.db.ref();
 export default {
   name: 'app',
   firebase: {
-    music: musicRef
-  },
+    music: musicRef,
+    },
   data () {
     return {
-      msg: "KC Music Connection",
-      comment: "Tracking Local Music around Kansas City",
+      msg: "My Music Tracker",
+      comment: "Tracking Your Favorite Bands, Concerts and Venues",
       }
     }
   }

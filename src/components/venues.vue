@@ -1,9 +1,12 @@
 <template>
   <div id="app">
-    <h1 class="bigbig">{{ venuestitle }}</h1>
-
-    <button class="signoutbutton"><router-link to="/profile">Return to Profile</router-link></button>
-
+    <div class="pageTitle">
+      <h1 class="bigbig" id="pageTitle">{{ venuestitle }}</h1>
+      <p>To <b>EDIT</b> a venue, click on it.</p>
+      <p>Once you <b>DELETE</b> a venue, it cannot be undone!</p>
+      <p>To <b>ADD</b> a venue, scroll down.</p>
+      <button class="returnbutton"><router-link to="/profile">Return to Profile</router-link></button>
+    </div>
     <div class="appBoxes">
         <div class="appBox">
 
@@ -34,7 +37,7 @@
 
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title">ADD NEW VENUE</p>
+          <p class="card-header-title" id="cardTitle">Add New Venue</p>
         </header>
         <div class="card-content">
           <div class="content">
@@ -71,11 +74,11 @@
 
       <div v-if="visible" class="modal is-active">
         <div class="modal-background"></div>
-        <div class="modal-content">
+        <div class="modal-content" id="editBox">
 
           <div class="card">
             <header class="card-header">
-              <p class="card-header-title">Edit Venue</p>
+              <p class="card-header-title" id="cardTitle">Edit Venue</p>
             </header>
             <div class="card-content">
               <div class="content">

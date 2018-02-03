@@ -1,10 +1,13 @@
 <template>
   <div id="app">
-    <h1 class="bigbig">{{ bandstitle }}</h1>
-
-      <button class="signoutbutton"><router-link to="/profile">Return to Profile</router-link></button>
-
-      <div class="appBoxes">
+    <div class="pageTitle">
+      <h1 class="bigbig" id="pageTitle">{{ bandstitle }}</h1>
+      <p>To <b>EDIT</b> a band, click on it.</p>
+      <p>Once you <b>DELETE</b> a band, it cannot be undone!</p>
+      <p>To <b>ADD</b> a band, scroll down.</p>
+      <button class="returnbutton"><router-link to="/profile">Return to Profile</router-link></button>
+    </div>
+    <div class="appBoxes">
           <div class="appBox">
 
             <table class="table">
@@ -32,7 +35,7 @@
 
         <div class="card">
           <header class="card-header">
-            <p class="card-header-title">Add New Band</p>
+            <p class="card-header-title" id="cardTitle">Add New Band</p>
           </header>
           <div class="card-content">
             <div class="content">
@@ -63,11 +66,11 @@
 
         <div v-if="visible" class="modal is-active">
           <div class="modal-background"></div>
-          <div class="modal-content">
+          <div class="modal-content" id="editBox">
 
             <div class="card">
               <header class="card-header">
-                <p class="card-header-title">Edit Band</p>
+                <p class="card-header-title" id="cardTitle">Edit Band</p>
               </header>
               <div class="card-content">
                 <div class="content">
